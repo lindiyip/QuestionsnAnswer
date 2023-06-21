@@ -7,7 +7,8 @@ const username = "Mary";
 
 const TopMenuContainer = () => {
   return (
-    <div className="flex justify-between border border-green-500 p-2 absolute w-full top-0">
+    // <div className="flex justify-between absolute w-full fixed top-0">
+    <div class="flex fixed top-0 w-full items-center justify-between bg-white text-gray-700 border-b border-gray-200 z-10">
       <CompanyLogo img={CompanyLogoImage} />
       <HyperLinks />
       <Welcome currentUser={username} />
