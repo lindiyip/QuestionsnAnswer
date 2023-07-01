@@ -1,8 +1,7 @@
 import React from "react";
 import TopMenuContainer from "./components/top-menu/Container";
-import { BasicTable } from "./components/table/BasicTable";
 import { SortingTable } from "./components/table/SortingTable";
-// import Entry from "./pages/inputs/Entry";
+import Entry from "./pages/inputs/Entry";
 
 function App() {
   return (
@@ -12,7 +11,7 @@ function App() {
         <button className="primary-button">New Question</button>
       </div>
       <SortingTable />
-      {/* <Entry /> */}
+      <Entry /> 
     </div>
   );
 }

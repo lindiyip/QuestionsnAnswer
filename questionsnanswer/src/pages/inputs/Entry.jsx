@@ -95,11 +95,13 @@ const Entry = ({ data, add }) => {
             <div className="basis-4/5">
               <input
                 type="text"
+                disabled={viewOnly}
                 name="question"
                 onChange={handleInputChange}
                 className={`custom-input ${
                   errorData?.question ? "red-border" : ""
-                }`}
+                } ${viewOnly ? "input-disabled" : ""}`}
+                value={formData.question}
               />
               <div className="custom-error">
                 {errorData.question ? errorData.question : null}
@@ -111,41 +113,31 @@ const Entry = ({ data, add }) => {
             <div className="basis-4/5">
               <input
                 type="text"
+                disabled={viewOnly}
                 name="subject"
                 onChange={handleInputChange}
                 className={`custom-input ${
                   errorData?.subject ? "red-border" : ""
-                }`}
+                } ${viewOnly ? "input-disabled" : ""}`}
+                value={formData.subject}
               />
               <div className="custom-error">
                 {errorData.subject ? errorData.subject : null}
               </div>
             </div>
           </div>
-          {/* <div className="flex mt-4">
-            <label className="basis-1/5 custom-display-label" for="subject">
-              Subject
-            </label>
-            <div className="basis-4/5">
-              <select id="subject" >
-                <option value="J1">JC 1</option>
-                <option value="J1">JC 2</option>
-              </select>
-              <div className="custom-error">
-                {errorData.subject ? errorData.subject : null}
-              </div>
-            </div>
-          </div> */}
           <div className="flex mt-4">
             <label className="basis-1/5 custom-display-label">Difficulty</label>
             <div className="basis-4/5">
               <input
                 type="text"
+                disabled={viewOnly}
                 name="difficulty"
                 onChange={handleInputChange}
                 className={`custom-input ${
                   errorData?.difficulty ? "red-border" : ""
-                }`}
+                } ${viewOnly ? "input-disabled" : ""}`}
+                value={formData.difficulty}
               />
               <div className="custom-error">
                 {errorData.difficulty ? errorData.difficulty : null}
@@ -159,11 +151,13 @@ const Entry = ({ data, add }) => {
             <div className="basis-4/5">
               <input
                 type="text"
+                disabled={viewOnly}
                 name="attempt"
                 onChange={handleInputChange}
                 className={`custom-input ${
                   errorData?.attempt ? "red-border" : ""
-                }`}
+                }  ${viewOnly ? "input-disabled" : ""}`}
+                value={formData.attempt}
               />
               <div className="custom-error">
                 {errorData.attempt ? errorData.attempt : null}
@@ -177,11 +171,13 @@ const Entry = ({ data, add }) => {
             <div className="basis-4/5">
               <input
                 type="text"
+                disabled={viewOnly}
                 name="comments"
                 onChange={handleInputChange}
                 className={`custom-input ${
                   errorData?.comments ? "red-border" : ""
-                }`}
+                }  ${viewOnly ? "input-disabled" : ""}`}
+                value={formData.comments}
               />
               <div className="custom-error">
                 {errorData.comments ? errorData.comments : null}
