@@ -1,12 +1,12 @@
 import React, { useMemo } from "react";
 import { useTable, useSortBy } from "react-table";
-import MOCK_DATA from "./MOCK_DATA.json";
+import MOCK_DATA1 from "./MOCK_DATA1.json";
 import { COLUMNS } from "./columns";
 import "./table.css";
 
-export const SortingTable = () => {
+const MyContribution = () => {
   const columns = useMemo(() => COLUMNS, []);
-  const data = useMemo(() => MOCK_DATA, []);
+  const data = useMemo(() => MOCK_DATA1, []);
 
   const tableInstance = useTable({
     columns,
@@ -49,3 +49,5 @@ export const SortingTable = () => {
     </div>
   );
 };
+
+export default MyContribution;

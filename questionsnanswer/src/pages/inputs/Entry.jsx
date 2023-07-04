@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const Entry = ({ data, add }) => {
+const Entry = ({ add, data }) => {
   const defaultFormData = {
     title: "",
     question: "",
@@ -15,14 +15,13 @@ const Entry = ({ data, add }) => {
 
   useEffect(() => {
     console.log("watch data useEffect", data)
-    // to check
-    // if (Object.keys(data).length > 0) {
-    //   setFormData(data);
-    //   setViewOnly(true);
-    // } else {
-    //   setFormData(defaultFormData);
-    //   setViewOnly(false);
-    // }
+    if (Object.keys(data).length > 0) {
+      setFormData(data);
+      setViewOnly(true);
+    } else {
+      setFormData(defaultFormData);
+      setViewOnly(false);
+    } 
   }, [data]);
 
   const validateData = () => {
@@ -51,7 +50,7 @@ const Entry = ({ data, add }) => {
   const handleSubmitClick = (e) => {
     e.preventDefault();
     if (validateData()) {
-      // add(formData); to check
+      add(formData);
       clearForm(e);
     }
   };
@@ -68,7 +67,6 @@ const Entry = ({ data, add }) => {
   };
 
   return (
-    <div className="flex">
       <div className="basis-4/5 border border-red-500 p-4">
         <form onSubmit={handleSubmitClick}>
           <div className="flex mt-4">
@@ -185,17 +183,12 @@ const Entry = ({ data, add }) => {
             </div>
           </div>
           <div className="mt-4 flex justify-end">
-            <button className="primary-button" onClick={handleSubmitClick}>
+            <button className="primary-button">
               Submit
             </button>
           </div>
         </form>
       </div>
-
-      <div className="basis-1/5 border border-blue-500 p-4">
-        Others Attempts
-      </div>
-    </div>
   );
 };
 

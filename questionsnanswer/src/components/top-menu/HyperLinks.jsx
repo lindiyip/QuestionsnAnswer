@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 const HyperLinks = () => {
   return (
     <div className="flex justify-between text-decoration-line: underline">
-      <a className="px-2 flex flex-col justify-center">Home</a>
-      <a className="px-2 flex flex-col justify-center">My Contributions</a>
+      <Link to={`/Home`} className="px-2 flex flex-col justify-center">Home</Link>
+      <Link to={`/MyContribution`} className="px-2 flex flex-col justify-center">My Contributions</Link>
     </div>
   );
 };

@@ -1,17 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import TopMenuContainer from "./components/top-menu/Container";
-import { SortingTable } from "./components/table/SortingTable";
-import Entry from "./pages/inputs/Entry";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <div>
       <TopMenuContainer />
       <div className="mt-[100px] flex justify-end px-5 py-5 bg-white text-gray-700">
-        <button className="primary-button">New Question</button>
+        <Link to={`/NewQuestion`}className="primary-button">New Question</Link>
       </div>
-      <SortingTable />
-      <Entry /> 
+      <Outlet /> 
     </div>
   );
 }

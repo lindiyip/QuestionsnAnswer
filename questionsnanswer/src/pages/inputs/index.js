@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Entry from "./inputs/Entry";
-import AllAttempts from "./inputs/AllAttempts";
+import Entry from "./Entry";
+import AllAttempts from "./AllAttempts";
 
 
 const Inputs = () => {
