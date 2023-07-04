@@ -10,6 +10,7 @@ import {
 import Home from './pages/home';
 import MyContribution from './pages/myContribution';
 import Inputs from "./pages/inputs"
+import AboutMe from "./pages/aboutMe"
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,11 @@ const router = createBrowserRouter([
           {
             path:'/NewQuestion',
             element: <Inputs />
-        },
+          },
+          {
+            path:'/AboutMe',
+            element: <AboutMe />
+          },
       ]        
   },
 ]);

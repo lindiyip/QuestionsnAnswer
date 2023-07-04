@@ -15,7 +15,7 @@ const Inputs = () => {
   };
 
   return (
-    <div className="flex">
+    <div className="flex mt-[100px]">
       <Entry data={selectedEntry} add={addAttempts} />
       <AllAttempts data={attempts} setSelectedEntry={setSelectedEntry} />
     </div>

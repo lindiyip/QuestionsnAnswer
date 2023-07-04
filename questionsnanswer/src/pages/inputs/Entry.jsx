@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 
 const Entry = ({ add, data }) => {
   const defaultFormData = {
@@ -65,6 +67,11 @@ const Entry = ({ add, data }) => {
       };
     });
   };
+
+  const subjectOptions = [
+    'Addtional Mathematics', 'Elementary Mathematics', 'Chemistry', 'Physics'
+  ];
+  const defaultSubjectOption = subjectOptions[0];
 
   return (
       <div className="basis-4/5 border border-red-500 p-4">
