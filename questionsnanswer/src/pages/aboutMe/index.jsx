@@ -5,7 +5,6 @@ import portrait from "../../assets/images/portrait.jpg";
 const AboutMe = () => {
 
     const {username, setUsername} = useContext(UserContext);
-    const {userStatus, setuserStatus} = useContext(UserContext);
 
     const handleChange = (e) => {
         e.preventDefault();
@@ -19,12 +18,6 @@ const AboutMe = () => {
                 <label className="basis-1/5 custom-display-label ps-15">Username: </label>
                     <form className='ps-4'>
                         <input type="text" className="flex basis-50 custom-input basis-1/12 ps-8" value={username} onChange={handleChange} name="username" />
-                    </form>
-            </div>
-            <div className="flex p-10">
-                <label className="basis-1/5 custom-display-label ps-15">User Status: </label>
-                    <form className='ps-4'>
-                        <input type="text" className="flex basis-50 custom-input basis-1/12" value={userStatus} onChange={handleChange} name="userStatus" /> 
                     </form>
             </div>
             <div>

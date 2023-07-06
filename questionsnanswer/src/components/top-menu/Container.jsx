@@ -10,7 +10,7 @@ const TopMenuContainer = () => {
   const {userStatus} = useContext(UserContext)
 
   return (
-    <div className="bg-white text-lg flex fixed top-0 w-full items-center justify-between border-none">
+    <div className="text-lg flex fixed top-0 w-full items-center justify-between bg-gray-50">
         <CompanyLogo img={CompanyLogoImage} />
         <HyperLinks />
         <Welcome currentUser={username} currentUserStatus={userStatus}/>

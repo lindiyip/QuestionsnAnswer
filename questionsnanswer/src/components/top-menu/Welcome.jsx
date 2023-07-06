@@ -25,7 +25,8 @@ const Welcome = ({ currentUser, currentUserStatus}) => {
   })
 
   return (
-    <div className="menu-container" ref={menuRef}>
+    <view>
+    <div className="App menu-container" ref={menuRef}>
       <div className="menu-trigger" onClick={()=>{setOpen(!open)}}>
         <img src={portrait}></img>
       </div>
@@ -42,6 +43,7 @@ const Welcome = ({ currentUser, currentUserStatus}) => {
 
       
     </div>
+    </view>
   );
 };
 
